@@ -53,6 +53,15 @@ class CalculatorTest {
     }
 
     @Test
+    void shouldReturnZeroWhenMultiplyingByZero() {
+        Calculator calculator = new Calculator();
+
+        double result = calculator.multiply(10, 0);
+
+        assertEquals(0, result);
+    }
+
+    @Test
     void shouldDivideTwoPositiveNumbers() {
         Calculator calculator = new Calculator();
 
