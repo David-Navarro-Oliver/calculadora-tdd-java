@@ -35,6 +35,15 @@ class CalculatorTest {
     }
 
     @Test
+    void shouldReturnNegativeResultWhenSecondNumberIsGreaterInSubtraction() {
+        Calculator calculator = new Calculator();
+
+        double result = calculator.subtract(5, 10);
+
+        assertEquals(-5, result);
+    }
+
+    @Test
     void shouldMultiplyTwoPositiveNumbers() {
         Calculator calculator = new Calculator();
 
