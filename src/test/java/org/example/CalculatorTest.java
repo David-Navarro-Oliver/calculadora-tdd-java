@@ -23,4 +23,13 @@ class CalculatorTest {
 
         assertEquals(5, result);
     }
+
+    @Test
+    void shouldMultiplyTwoPositiveNumbers() {
+        Calculator calculator = new Calculator();
+
+        double result = calculator.multiply(10, 5);
+
+        assertEquals(50, result);
+    }
 }
