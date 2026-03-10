@@ -3,6 +3,7 @@ package org.example;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class CalculatorTest {
 
@@ -40,5 +41,12 @@ class CalculatorTest {
         double result = calculator.divide(10, 5);
 
         assertEquals(2, result);
+    }
+
+    @Test
+    void shouldThrowExceptionWhenDividingByZero() {
+        Calculator calculator = new Calculator();
+
+        assertThrows(IllegalArgumentException.class, () -> calculator.divide(10, 0));
     }
 }

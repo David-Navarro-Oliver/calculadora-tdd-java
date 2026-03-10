@@ -15,6 +15,10 @@ public class Calculator {
     }
 
     public double divide(double firstNumber, double secondNumber) {
+        if (secondNumber == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero");
+        }
+
         return firstNumber / secondNumber;
     }
 }
