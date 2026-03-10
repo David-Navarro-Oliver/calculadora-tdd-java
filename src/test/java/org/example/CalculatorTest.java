@@ -17,6 +17,15 @@ class CalculatorTest {
     }
 
     @Test
+    void shouldAddPositiveAndNegativeNumbers() {
+        Calculator calculator = new Calculator();
+
+        double result = calculator.add(10, -5);
+
+        assertEquals(5, result);
+    }
+
+    @Test
     void shouldSubtractTwoPositiveNumbers() {
         Calculator calculator = new Calculator();
 
