@@ -32,4 +32,13 @@ class CalculatorTest {
 
         assertEquals(50, result);
     }
+
+    @Test
+    void shouldDivideTwoPositiveNumbers() {
+        Calculator calculator = new Calculator();
+
+        double result = calculator.divide(10, 5);
+
+        assertEquals(2, result);
+    }
 }
