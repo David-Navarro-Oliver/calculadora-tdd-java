@@ -71,6 +71,15 @@ class CalculatorTest {
     }
 
     @Test
+    void shouldReturnDecimalResultWhenDivisionIsNotExact() {
+        Calculator calculator = new Calculator();
+
+        double result = calculator.divide(7, 2);
+
+        assertEquals(3.5, result);
+    }
+
+    @Test
     void shouldThrowExceptionWhenDividingByZero() {
         Calculator calculator = new Calculator();
 
