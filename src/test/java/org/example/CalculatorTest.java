@@ -14,4 +14,13 @@ class CalculatorTest {
 
         assertEquals(15, result);
     }
+
+    @Test
+    void shouldSubtractTwoPositiveNumbers() {
+        Calculator calculator = new Calculator();
+
+        double result = calculator.subtract(10, 5);
+
+        assertEquals(5, result);
+    }
 }
