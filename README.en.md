@@ -1,12 +1,14 @@
 <a id="readme-en"></a>
 
-# Calculator - TDD - Java
+# 🧮 Calculator - TDD - Java
 
 ![Java 25](https://img.shields.io/badge/Java-25-ED8B00?logo=openjdk&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-Wrapper%20included-C71A36?logo=apachemaven&logoColor=white)
 ![JUnit 5.10.2](https://img.shields.io/badge/JUnit-5.10.2-25A162?logo=junit5&logoColor=white)
+![IntelliJ IDEA 2025](https://img.shields.io/badge/IntelliJ_IDEA-2025-000000?logo=intellijidea&logoColor=white)
 ![TDD](https://img.shields.io/badge/TDD-Red%20--%20Green%20--%20Refactor-1F6FEB)
 ![Docs ES EN](https://img.shields.io/badge/Docs-ES%20%7C%20EN-0A66C2)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white)
 
 **Language:** [Español](./README.md#readme-es) | **English**
 
@@ -30,7 +32,9 @@
 
 <a id="description"></a>
 
-## Description
+## 📘 Description
+
+![Content](https://img.shields.io/badge/Content-project_overview-0A66C2) ![Approach](https://img.shields.io/badge/Approach-real_TDD-1F6FEB)
 
 **Calculator - TDD - Java** is a simple calculator built in **Vanilla Java** following a **real TDD (Test-Driven Development)** approach. The project is organized around three clearly defined parts: `Calculator`, which contains the mathematical logic; `Main`, which runs the program and prints results to the console; and `CalculatorTest`, which validates the expected behavior through unit tests.
 
@@ -38,7 +42,9 @@ Its scope is intentionally clear: to demonstrate a small, clean, and professiona
 
 ---
 
-## Technologies Used
+## ⚙️ Technologies Used
+
+![Stack](https://img.shields.io/badge/Stack-Java_25-ED8B00) ![Build](https://img.shields.io/badge/Build-Maven_Wrapper-C71A36)
 
 - Java 25
 - Maven
@@ -52,7 +58,9 @@ Its scope is intentionally clear: to demonstrate a small, clean, and professiona
 
 <a id="project-structure"></a>
 
-## Project Structure
+## 🗂️ Project Structure
+
+![Architecture](https://img.shields.io/badge/Architecture-src_main_test-6A5ACD) ![Wrapper](https://img.shields.io/badge/Wrapper-mvnw_%7C_mvnw.cmd-8A2BE2)
 
 ```text
 calculadora-tdd-java/
@@ -88,7 +96,9 @@ The presence of `.mvn/`, `mvnw`, and `mvnw.cmd` lets you run Maven through the p
 
 <a id="project-roles"></a>
 
-## Main / Calculator / CalculatorTest
+## 🧩 Main / Calculator / CalculatorTest
+
+![Separation](https://img.shields.io/badge/Separation-responsibilities-0F766E) ![SRP](https://img.shields.io/badge/SOLID-SRP-2E8B57)
 
 The class separation is intentional and is part of the educational value of the repository:
 
@@ -102,7 +112,9 @@ This split makes it obvious which part demonstrates usage (`Main`), which part s
 
 ---
 
-## Implemented Features
+## 🚀 Implemented Features
+
+![Operations](https://img.shields.io/badge/Operations-add_subtract_multiply_divide-FF8C00) ![Type](https://img.shields.io/badge/Data-double-8B5CF6)
 
 The `Calculator` class provides four public methods to work with `double` values:
 
@@ -111,13 +123,17 @@ The `Calculator` class provides four public methods to work with `double` values
 - `multiply(double firstNumber, double secondNumber)`: returns the product of both values.
 - `divide(double firstNumber, double secondNumber)`: performs division and validates that the divisor is not zero.
 
-### Implemented Behavior
+### 🧠 Implemented Behavior
+
+![Validation](https://img.shields.io/badge/Validation-divide_by_zero-D7263D) ![Scenarios](https://img.shields.io/badge/Scenarios-positive_negative_zero-2563EB)
 
 The calculator performs mathematical operations based on the values received by each method and returns correct results with positive numbers, negative numbers, and zero. The implementation supports both exact and decimal division results, and it safely handles division by zero by throwing an `IllegalArgumentException`, preventing invalid runtime behavior.
 
 ---
 
-## Program Execution
+## 💻 Program Execution
+
+![EntryPoint](https://img.shields.io/badge/Entry_Point-Main.java-111827) ![Output](https://img.shields.io/badge/Output-console-1D4ED8)
 
 The `Main` class creates an instance of `Calculator`, defines two sample values (`10` and `5`), and prints the result of the four main operations to the console.
 
@@ -130,17 +146,23 @@ Multiplication: 50.0
 Division: 2.0
 ```
 
-### Evidence
+### 🖼️ Evidence
+
+![Preview](https://img.shields.io/badge/Preview-main_output-64748B)
 
 ![Main execution](./assets/img/CalculatorPantalla.png)
 
 ---
 
-## Tests
+## 🧪 Tests
+
+![Testing](https://img.shields.io/badge/Testing-JUnit_5-25A162) ![Quality](https://img.shields.io/badge/Quality-regression_safety-0EA5E9)
 
 The project includes unit tests with **JUnit 5** to verify the behavior of each operation and ensure the business logic responds correctly across standard scenarios and edge cases.
 
-### Covered Cases
+### ✅ Covered Cases
+
+![Coverage](https://img.shields.io/badge/Coverage-basic_operations-F59E0B) ![Exceptions](https://img.shields.io/badge/Exceptions-divide_by_zero-DC2626)
 
 - addition with positive numbers
 - addition with a positive and a negative number
@@ -152,7 +174,9 @@ The project includes unit tests with **JUnit 5** to verify the behavior of each 
 - division with a decimal result
 - division by zero with the expected exception
 
-### Evidence
+### 🖼️ Evidence
+
+![Preview](https://img.shields.io/badge/Preview-tests_passing-64748B)
 
 ![Passing tests in IntelliJ](./assets/img/CalculatorTest.png)
 
@@ -160,7 +184,9 @@ The project includes unit tests with **JUnit 5** to verify the behavior of each 
 
 <a id="applied-tdd-methodology"></a>
 
-## Applied TDD Methodology
+## 🔁 Applied TDD Methodology
+
+![Method](https://img.shields.io/badge/Method-Red_Green_Refactor-1F6FEB) ![Practice](https://img.shields.io/badge/Practice-test_first-0891B2)
 
 This project follows the classic **real TDD** workflow, applying a short and controlled cycle for each feature:
 
@@ -172,7 +198,9 @@ This project follows the classic **real TDD** workflow, applying a short and con
 
 This approach promotes more reliable code, fast feedback, and evolution guided by observable requirements.
 
-### Red -> Green -> Refactor in this repository
+### 🔴🟢♻️ Red -> Green -> Refactor in this repository
+
+![Red](https://img.shields.io/badge/Red-test_failing-DC2626) ![Green](https://img.shields.io/badge/Green-minimum_code-16A34A) ![Refactor](https://img.shields.io/badge/Refactor-cleanup-7C3AED)
 
 - **Red**: `CalculatorTest` defines what should happen first, for example when division by zero must throw an exception.
 - **Green**: `Calculator` adds only the minimum logic required for that test to pass.
@@ -180,7 +208,9 @@ This approach promotes more reliable code, fast feedback, and evolution guided b
 
 In this project, `Main` does not drive the design of the logic. The tests drive the design, while `Main` remains a usage example rather than a behavior specification.
 
-### What TDD adds here
+### 📈 What TDD adds here
+
+![Feedback](https://img.shields.io/badge/Feedback-fast-0284C7) ![Safety](https://img.shields.io/badge/Safety-fewer_regressions-059669)
 
 - it turns each requirement into a repeatable test;
 - it reduces regressions when `Calculator` changes;
@@ -189,7 +219,9 @@ In this project, `Main` does not drive the design of the logic. The tests drive 
 
 ---
 
-## Applied SOLID Principles
+## 🧱 Applied SOLID Principles
+
+![SOLID](https://img.shields.io/badge/SOLID-applied-2E8B57) ![Principle](https://img.shields.io/badge/Principle-SRP-15803D)
 
 This project applies the **Single Responsibility Principle (SRP)** in a clear way:
 
@@ -201,7 +233,9 @@ This separation keeps the code easy to understand, easy to extend, and straightf
 
 ---
 
-## Naming and Best Practices
+## 🏷️ Naming and Best Practices
+
+![Naming](https://img.shields.io/badge/Naming-clear_and_professional-7C3AED) ![Readability](https://img.shields.io/badge/Readability-high-0F766E)
 
 The project uses **clear, clean, and professional naming**, so every class, method, and variable communicates its intent without ambiguity. Names such as `Calculator`, `Main`, `CalculatorTest`, `firstNumber`, `secondNumber`, `add`, `subtract`, `multiply`, and `divide` describe exactly what they represent and make the code easy to read.
 
@@ -211,11 +245,15 @@ The structure also follows sound Java fundamentals: well-defined responsibilitie
 
 <a id="how-to-run-the-project"></a>
 
-## How to Run the Project
+## ▶️ How to Run the Project
+
+![Run](https://img.shields.io/badge/Run-IntelliJ_and_terminal-2563EB) ![Compatibility](https://img.shields.io/badge/CLI-Windows_macOS_Linux-475569)
 
 You can run the project in two common ways:
 
-### From IntelliJ IDEA 2025
+### 💡 From IntelliJ IDEA 2025
+
+![IDE](https://img.shields.io/badge/IDE-IntelliJ_IDEA_2025-000000) ![SDK](https://img.shields.io/badge/SDK-JDK_25-F97316)
 
 - Open the project as a Maven project.
 - Make sure the configured SDK is **JDK 25**, because `pom.xml` compiles with `source` and `target` set to `25`.
@@ -225,7 +263,9 @@ You can run the project in two common ways:
 
 If you want to run the main class from IntelliJ, simply use the `Run 'Main.main()'` option on `Main.java`.
 
-### From the terminal with Maven Wrapper
+### 🖥️ From the terminal with Maven Wrapper
+
+![Wrapper](https://img.shields.io/badge/Maven-Wrapper-C71A36) ![Commands](https://img.shields.io/badge/Commands-mvnw_and_mvnw.cmd-1D4ED8)
 
 The wrapper is the recommended option because the repository already includes `mvnw`, `mvnw.cmd`, and `.mvn/wrapper`.
 
@@ -251,7 +291,9 @@ If `mvnw` does not have execution permission:
 chmod +x mvnw
 ```
 
-### From the terminal with globally installed Maven
+### ⌨️ From the terminal with globally installed Maven
+
+![CLI](https://img.shields.io/badge/CLI-mvn-334155) ![Option](https://img.shields.io/badge/Option-global_Maven-9333EA)
 
 You can also use Maven directly if it is already installed on your system:
 
@@ -263,13 +305,17 @@ java -cp target/classes org.example.Main
 
 ---
 
-## Author
+## 👨‍💻 Author
+
+![Author](https://img.shields.io/badge/Author-David_Navarro-111827) ![Status](https://img.shields.io/badge/Project-documented-0A66C2)
 
 **David Navarro**
 
 ---
 
-## Language Navigation
+## 🌐 Language Navigation
+
+![Docs](https://img.shields.io/badge/Docs-bilingual-0A66C2) ![Languages](https://img.shields.io/badge/Languages-ES_EN-1D4ED8)
 
 - English home: [README.en.md](#readme-en)
 - Spanish README: [README.md](./README.md#readme-es)
