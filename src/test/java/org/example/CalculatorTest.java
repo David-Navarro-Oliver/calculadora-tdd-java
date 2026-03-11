@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -7,10 +8,15 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class CalculatorTest {
 
+    private Calculator calculator;
+
+    @BeforeEach
+    void setUp() {
+        calculator = new Calculator();
+    }
+
     @Test
     void shouldAddTwoPositiveNumbers() {
-        Calculator calculator = new Calculator();
-
         double result = calculator.add(10, 5);
 
         assertEquals(15, result);
@@ -18,8 +24,6 @@ class CalculatorTest {
 
     @Test
     void shouldAddPositiveAndNegativeNumbers() {
-        Calculator calculator = new Calculator();
-
         double result = calculator.add(10, -5);
 
         assertEquals(5, result);
@@ -27,8 +31,6 @@ class CalculatorTest {
 
     @Test
     void shouldSubtractTwoPositiveNumbers() {
-        Calculator calculator = new Calculator();
-
         double result = calculator.subtract(10, 5);
 
         assertEquals(5, result);
@@ -36,8 +38,6 @@ class CalculatorTest {
 
     @Test
     void shouldReturnNegativeResultWhenSecondNumberIsGreaterInSubtraction() {
-        Calculator calculator = new Calculator();
-
         double result = calculator.subtract(5, 10);
 
         assertEquals(-5, result);
@@ -45,8 +45,6 @@ class CalculatorTest {
 
     @Test
     void shouldMultiplyTwoPositiveNumbers() {
-        Calculator calculator = new Calculator();
-
         double result = calculator.multiply(10, 5);
 
         assertEquals(50, result);
@@ -54,8 +52,6 @@ class CalculatorTest {
 
     @Test
     void shouldReturnZeroWhenMultiplyingByZero() {
-        Calculator calculator = new Calculator();
-
         double result = calculator.multiply(10, 0);
 
         assertEquals(0, result);
@@ -63,8 +59,6 @@ class CalculatorTest {
 
     @Test
     void shouldDivideTwoPositiveNumbers() {
-        Calculator calculator = new Calculator();
-
         double result = calculator.divide(10, 5);
 
         assertEquals(2, result);
@@ -72,8 +66,6 @@ class CalculatorTest {
 
     @Test
     void shouldReturnDecimalResultWhenDivisionIsNotExact() {
-        Calculator calculator = new Calculator();
-
         double result = calculator.divide(7, 2);
 
         assertEquals(3.5, result);
@@ -81,8 +73,6 @@ class CalculatorTest {
 
     @Test
     void shouldThrowExceptionWhenDividingByZero() {
-        Calculator calculator = new Calculator();
-
         assertThrows(IllegalArgumentException.class, () -> calculator.divide(10, 0));
     }
 }
