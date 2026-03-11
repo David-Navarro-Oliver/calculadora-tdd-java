@@ -204,7 +204,7 @@ This approach promotes more reliable code, fast feedback, and evolution guided b
 
 - **Red**: `CalculatorTest` defines what should happen first, for example when division by zero must throw an exception.
 - **Green**: `Calculator` adds only the minimum logic required for that test to pass.
-- **Refactor**: once the suite is green, the code can be cleaned up safely without breaking verified behavior.
+- **Refactor**: once the suite is green, `CalculatorTest` can simplify its shared setup by moving `Calculator` creation into `@BeforeEach`, removing duplication without changing the verified behavior.
 
 In this project, `Main` does not drive the design of the logic. The tests drive the design, while `Main` remains a usage example rather than a behavior specification.
 

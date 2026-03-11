@@ -204,7 +204,7 @@ Este enfoque favorece un código más fiable, con feedback rápido y una evoluci
 
 - **Red**: `CalculatorTest` define primero qué debe ocurrir, por ejemplo cuando una división por cero debe lanzar una excepción.
 - **Green**: `Calculator` incorpora solo la lógica mínima necesaria para que ese test pase.
-- **Refactor**: con la suite en verde, el código puede limpiarse sin miedo a romper el comportamiento ya cubierto.
+- **Refactor**: con la suite en verde, `CalculatorTest` puede simplificar su setup compartido moviendo la creación de `Calculator` a `@BeforeEach`, eliminando duplicación sin alterar el comportamiento ya cubierto.
 
 En este proyecto, `Main` no dirige el diseño de la lógica. El diseño nace desde los tests y `Main` queda como demostración de uso, no como especificación del comportamiento.
 
